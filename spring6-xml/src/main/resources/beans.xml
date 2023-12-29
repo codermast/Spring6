@@ -10,6 +10,6 @@
         id：设置bean的唯一标识
         class：设置bean所对应类型的全类名
 	-->
-    <bean id="helloWorld" class="com.codermast.spring6.com.codermast.spring6.bean.HelloWorld"></bean>
+    <bean id="helloWorld" class="com.codermast.spring6.bean.HelloWorld"></bean>
 
 </beans>
