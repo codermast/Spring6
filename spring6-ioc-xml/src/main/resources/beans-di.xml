@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="studentOne" class="com.codermast.spring6.iocxml.bean.Student">
+        <!-- property标签：通过组件类的setXxx()方法给组件对象设置属性 -->
+        <!-- name属性：指定属性名（这个属性名是getXxx()、setXxx()方法定义的，和成员变量无关） -->
+        <!-- value属性：指定属性值 -->
+        <property name="id" value="1001"/>
+        <property name="name" value="张三"/>
+        <property name="age" value="23"/>
+        <property name="sex" value="男"/>
+    </bean>
+
+    <!--创建构造器 bean-->
+    <bean id="studentTwo" class="com.codermast.spring6.iocxml.bean.Student">
+        <constructor-arg value="1002"/>
+        <constructor-arg value="李四"/>
+        <constructor-arg value="33"/>
+        <constructor-arg value="女"/>
+    </bean>
+</beans>

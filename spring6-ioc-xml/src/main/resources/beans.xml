@@ -3,13 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!--
-    配置HelloWorld所对应的bean，即将HelloWorld的对象交给Spring的IOC容器管理
-    通过bean标签配置IOC容器所管理的bean
-    属性：
-        id：设置bean的唯一标识
-        class：设置bean所对应类型的全类名
-	-->
-    <bean id="helloWorld" class="com.codermast.spring6.bean.HelloWorld"></bean>
-
+    <!-- 创建 User 类的 bean-->
+    <bean id="user" class="com.codermast.spring6.iocxml.bean.User"/>
+    <!--<bean id="user1" class="com.codermast.spring6.iocxml.bean.User"/>-->
 </beans>
