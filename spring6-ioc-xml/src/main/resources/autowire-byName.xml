@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--自动装配：byName 方式-->
+    <bean id="userController" class="com.codermast.spring6.iocxml.bean.autowire.controller.UserController"
+          autowire="byName"/>
+
+    <bean id="userService" class="com.codermast.spring6.iocxml.bean.autowire.service.UserServiceImpl"
+          autowire="byName"/>
+    <bean id="userServiceImpl" class="com.codermast.spring6.iocxml.bean.autowire.service.UserServiceImpl"
+          autowire="byName"/>
+
+    <bean id="userDao" class="com.codermast.spring6.iocxml.bean.autowire.dao.UserDaoImpl"/>
+    <bean id="userDaoImpl" class="com.codermast.spring6.iocxml.bean.autowire.dao.UserDaoImpl"/>
+</beans>
