@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-    <!-- 配置 User 类 -->
-    <bean id="userSingleton" class="com.codermast.spring6.iocxml.bean.User" scope="singleton"/>
-    <bean id="userPrototype" class="com.codermast.spring6.iocxml.bean.User" scope="prototype"/>
-</beans>
