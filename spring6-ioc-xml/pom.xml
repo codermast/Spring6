@@ -9,7 +9,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>spring6-xml</artifactId>
+    <artifactId>spring6-ioc-xml</artifactId>
 
     <properties>
         <maven.compiler.source>19</maven.compiler.source>
