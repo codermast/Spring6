@@ -1,5 +1,7 @@
 package com.codermast.spring6.iocxml.bean;
 
+import java.util.Map;
+
 public class Student {
 
     private Integer id;
@@ -79,5 +81,15 @@ public class Student {
 
     public void setHobbies(String[] hobbies) {
         this.hobbies = hobbies;
+    }
+
+    private Map<String, Teacher> teacherMap;
+
+    public Map<String, Teacher> getTeacherMap() {
+        return teacherMap;
+    }
+
+    public void setTeacherMap(Map<String, Teacher> teacherMap) {
+        this.teacherMap = teacherMap;
     }
 }

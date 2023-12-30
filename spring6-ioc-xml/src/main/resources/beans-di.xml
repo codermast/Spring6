@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <beans xmlns="http://www.springframework.org/schema/beans"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:util="http://www.springframework.org/schema/util"
+           xsi:schemaLocation="http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
 
     <bean id="studentOne" class="com.codermast.spring6.iocxml.bean.Student">
         <!-- property标签：通过组件类的setXxx()方法给组件对象设置属性 -->
@@ -77,5 +82,105 @@
                 <value>烫头</value>
             </array>
         </property>
+    </bean>
+
+    <!--List 集合配置-->
+    <bean id="clazzTwo" class="com.codermast.spring6.iocxml.bean.Clazz">
+        <property name="clazzId" value="4444"/>
+        <property name="clazzName" value="Javaee0222"/>
+        <property name="students">
+            <list>
+                <ref bean="studentOne"/>
+                <ref bean="studentTwo"/>
+                <ref bean="studentFour"/>
+                <ref bean="studentFive"/>
+            </list>
+        </property>
+    </bean>
+
+
+    <!-- Map 集合配置-->
+    <bean id="teacherOne" class="com.codermast.spring6.iocxml.bean.Teacher">
+        <property name="teacherId" value="10010"/>
+        <property name="teacherName" value="大宝"/>
+    </bean>
+
+    <bean id="teacherTwo" class="com.codermast.spring6.iocxml.bean.Teacher">
+        <property name="teacherId" value="10086"/>
+        <property name="teacherName" value="二宝"/>
+    </bean>
+
+    <bean id="studentFour" class="com.codermast.spring6.iocxml.bean.Student">
+        <property name="id" value="1004"/>
+        <property name="name" value="赵六"/>
+        <property name="age" value="26"/>
+        <property name="sex" value="女"/>
+        <!-- ref属性：引用IOC容器中某个bean的id，将所对应的bean为属性赋值 -->
+        <property name="clazz" ref="clazzOne"/>
+        <property name="hobbies">
+            <array>
+                <value>抽烟</value>
+                <value>喝酒</value>
+                <value>烫头</value>
+            </array>
+        </property>
+        <property name="teacherMap">
+            <map>
+                <entry value-ref="teacherOne">
+                    <key>
+                        <value>10010</value>
+                    </key>
+                </entry>
+                <entry value-ref="teacherTwo">
+                    <key>
+                        <value>10086</value>
+                    </key>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <!--引用集合类-->
+    <!--list集合类型的bean-->
+    <util:list id="students">
+        <ref bean="studentOne"/>
+        <ref bean="studentTwo"/>
+        <ref bean="studentFour"/>
+    </util:list>
+    <!--map集合类型的bean-->
+    <util:map id="teacherMap">
+        <entry>
+            <key>
+                <value>10010</value>
+            </key>
+            <ref bean="teacherOne"/>
+        </entry>
+        <entry>
+            <key>
+                <value>10086</value>
+            </key>
+            <ref bean="teacherTwo"/>
+        </entry>
+    </util:map>
+    <bean id="clazzTwo" class="com.codermast.spring6.iocxml.bean.Clazz">
+        <property name="clazzId" value="4444"/>
+        <property name="clazzName" value="Javaee0222"/>
+        <property name="students" ref="students"/>
+    </bean>
+    <bean id="studentFour" class="com.codermast.spring6.iocxml.bean.Student">
+        <property name="id" value="1004"/>
+        <property name="name" value="赵六"/>
+        <property name="age" value="26"/>
+        <property name="sex" value="女"/>
+        <!-- ref属性：引用IOC容器中某个bean的id，将所对应的bean为属性赋值 -->
+        <property name="clazz" ref="clazzOne"/>
+        <property name="hobbies">
+            <array>
+                <value>抽烟</value>
+                <value>喝酒</value>
+                <value>烫头</value>
+            </array>
+        </property>
+        <property name="teacherMap" ref="teacherMap"/>
     </bean>
 </beans>
