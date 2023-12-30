@@ -10,6 +10,8 @@ public class Student {
 
     private String sex;
 
+    private Clazz clazz;
+
     public Student() {
     }
 
@@ -45,6 +47,13 @@ public class Student {
         this.sex = sex;
     }
 
+    public Clazz getClazz() {
+        return clazz;
+    }
+
+    public void setClazz(Clazz clazz) {
+        this.clazz = clazz;
+    }
     @Override
     public String toString() {
         return "Student{" +
@@ -60,5 +69,15 @@ public class Student {
         this.name = name;
         this.age = age;
         this.sex = sex;
+    }
+
+    private String[] hobbies;
+
+    public String[] getHobbies() {
+        return hobbies;
+    }
+
+    public void setHobbies(String[] hobbies) {
+        this.hobbies = hobbies;
     }
 }

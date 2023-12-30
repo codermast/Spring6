@@ -20,4 +20,62 @@
         <constructor-arg value="33"/>
         <constructor-arg value="女"/>
     </bean>
+
+    <!--1.外部bean-->
+    <bean id="clazzOne" class="com.codermast.spring6.iocxml.bean.Clazz">
+        <property name="clazzId" value="1111"/>
+        <property name="clazzName" value="财源滚滚班"/>
+    </bean>
+
+    <bean id="studentFour" class="com.codermast.spring6.iocxml.bean.Student">
+        <property name="id" value="1004"/>
+        <property name="name" value="赵六"/>
+        <property name="age" value="26"/>
+        <property name="sex" value="女"/>
+        <!-- ref属性：引用IOC容器中某个bean的id，将所对应的bean为属性赋值 -->
+        <property name="clazz" ref="clazzOne"/>
+    </bean>
+
+    <!-- 2.内部bean-->
+    <bean id="studentFive" class="com.codermast.spring6.iocxml.bean.Student">
+        <property name="id" value="1004"/>
+        <property name="name" value="赵六"/>
+        <property name="age" value="26"/>
+        <property name="sex" value="女"/>
+        <property name="clazz">
+            <!-- 在一个bean中再声明一个bean就是内部bean -->
+            <!-- 内部bean只能用于给属性赋值，不能在外部通过IOC容器获取，因此可以省略id属性 -->
+            <bean id="clazzInner" class="com.codermast.spring6.iocxml.bean.Clazz">
+                <property name="clazzId" value="2222"/>
+                <property name="clazzName" value="远大前程班"/>
+            </bean>
+        </property>
+    </bean>
+    <!--级联属性赋值-->
+    <bean id="studentSix" class="com.codermast.spring6.iocxml.bean.Student">
+        <property name="id" value="1004"/>
+        <property name="name" value="赵六"/>
+        <property name="age" value="26"/>
+        <property name="sex" value="女"/>
+        <property name="clazz" ref="clazzOne"/>
+        <property name="clazz.clazzId" value="3333"/>
+        <property name="clazz.clazzName" value="最强王者班"/>
+    </bean>
+
+    <!--数组类型配置 bean-->
+    <bean id="studentSeven" class="com.codermast.spring6.iocxml.bean.Student">
+        <property name="id" value="1004"/>
+        <property name="name" value="赵六"/>
+        <property name="age" value="26"/>
+        <property name="sex" value="女"/>
+        <!-- ref属性：引用IOC容器中某个bean的id，将所对应的bean为属性赋值 -->
+        <property name="clazz" ref="clazzOne"/>
+        <property name="hobbies">
+            <array>
+                <value>抽烟</value>
+                <value>喝酒</value>
+                <value>烫头</value>
+            </array>
+        </property>
+    </bean>
 </beans>
