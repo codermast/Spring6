@@ -15,6 +15,7 @@
         <module>spring6-reflect</module>
         <module>spring6-aop</module>
         <module>spring6-junit</module>
+        <module>spring6-transaction</module>
     </modules>
 
     <properties>
