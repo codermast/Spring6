@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- 创建 User 类的 bean-->
-    <bean id="user" class="com.codermast.spring6.iocxml.bean.User"/>
-    <!--<bean id="user1" class="com.codermast.spring6.iocxml.bean.User"/>-->
+    <!-- 创建 com.User 类的 bean-->
+    <bean id="user" class="com.codermast.spring6.iocxml.bean.com.User"/>
+    <!--<bean id="user1" class="com.codermast.spring6.iocxml.bean.com.User"/>-->
 </beans>

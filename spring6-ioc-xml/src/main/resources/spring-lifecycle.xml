@@ -5,7 +5,7 @@
 
     <!-- 使用init-method属性指定初始化方法 -->
     <!-- 使用destroy-method属性指定销毁方法 -->
-    <bean class="com.codermast.spring6.iocxml.bean.User" scope="singleton" init-method="initMethod" destroy-method="destroyMethod">
+    <bean class="com.codermast.spring6.iocxml.bean.com.User" scope="singleton" init-method="initMethod" destroy-method="destroyMethod">
         <property name="id" value="1001"/>
         <property name="username" value="admin"/>
         <property name="password" value="123456"/>

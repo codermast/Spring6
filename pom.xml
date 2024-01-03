@@ -18,6 +18,7 @@
         <module>spring6-transaction</module>
         <module>spring6-resources</module>
         <module>spring6-i18n</module>
+        <module>spring6-validation</module>
     </modules>
 
     <properties>
