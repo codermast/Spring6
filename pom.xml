@@ -17,6 +17,7 @@
         <module>spring6-junit</module>
         <module>spring6-transaction</module>
         <module>spring6-resources</module>
+        <module>spring6-i18n</module>
     </modules>
 
     <properties>
