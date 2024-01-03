@@ -27,4 +27,4 @@
 
 最后感谢您为本项目的贡献，感谢您为开源项目的贡献，祝您学习顺利、工作愉快、生活幸福。
 
-![](images/weixin-codermast.png)
+<img src="images/weixin-codermast.png" width="50%"/>
