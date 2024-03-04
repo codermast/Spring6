@@ -1,6 +1,14 @@
 # Spring6
 
-![img.png](images/img.png)
+## 开始之前
+
+对你有用的话，希望能给项目点个Star，非常感谢。
+
+对于项目的任何问题，或者你在本地部署时遇到的无法解决的问题，都可以提交issues，又可能你遇到的问题别人已经提交了issues，那么你就直接可以得到解决。没有解决的我会在第一时间进行解决和答复
+
+欢迎关注我的微信公众号，可以随时和我交流。
+
+![](https://github.com/CoderMast/codermast/blob/1efef0209335977754163ebc513b7d4b91eeaf41/images/%E6%89%AB%E7%A0%81_%E7%99%BD%E8%89%B2%E7%89%88.png)
 
 ## 项目介绍
 
